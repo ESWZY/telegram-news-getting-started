@@ -14,5 +14,8 @@
 			"description": "Channel ID to push messages.",
 			"value": "@yourchannel"
 		}
-	}
+	},
+	 "buildpacks": [{
+		"url": "heroku/python"
+	}]
 }
