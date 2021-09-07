@@ -15,7 +15,9 @@
 			"value": "@yourchannel"
 		}
 	},
-	 "buildpacks": [{
-		"url": "heroku/python"
-	}]
+	"buildpacks": [
+		{
+			"url": "heroku/python"
+		}
+	]
 }
