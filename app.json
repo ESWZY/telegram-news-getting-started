@@ -8,7 +8,7 @@
 	"env": {
 		"TOKEN": {
 			"description": "Bot token obtained from @BotFather.",
-			"generator": "secret"
+			"value": "1234567890:asfghjklASDFGHJKL_A123"
 		},
 		"CHANNEL": {
 			"description": "Channel ID to push messages.",
@@ -16,9 +16,6 @@
 		}
 	},
 	"buildpacks": [
-		{
-			"url": "https://github.com/heroku/heroku-buildpack-pgbouncer"
-		},
 		{
 			"url": "heroku/python"
 		}
