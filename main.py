@@ -18,7 +18,7 @@ db = Session(bind=engine.connect())
 #-------------------------channel 1----------------------------------#
 
 url1 = "https://en.wikinews.org/wiki/Main_Page"
-tag1 = "Wiki News"
+tag1 = "Wiki"
 table_name1 = "wikinews"
 
 # Info extractor to process data format
