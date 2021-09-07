@@ -1,0 +1,20 @@
+{
+  "name": "Telegram-news",
+  "description": "A demo for telegram-news deploy.",
+  "repository": "https://github.com/ESWZY/telegram-news-deploy",
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+    }
+  ],
+  "env": {
+    "TOKEN": {
+      "description": "Bot token obtained from @BotFather.",
+      "generator": "secret"
+    },
+    "CHANNEL": {
+      "description": "Channel ID to push messages.",
+      "value": "@yourchannel"
+    }
+  }
+}
