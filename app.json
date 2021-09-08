@@ -7,7 +7,7 @@
 	}],
 	"env": {
 		"TOKEN": {
-			"description": "Bot token obtained from @BotFather. Don't forget to invate your bot into the channel and make admin.",
+			"description": "Bot token obtained from @BotFather. Don't forget to invite your bot into the channel and make admin.",
 			"value": "1234567890:asfghjklASDFGHJKL_A123"
 		},
 		"CHANNEL": {
