@@ -24,14 +24,12 @@ table_name1 = "wikinews"
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
-# Select select element by CSS-based selector
+# Select elements by CSS-based selector
 ie1.set_list_selector('#MainPage_latest_news_text > ul > li')
 ie1.set_title_selector('#firstHeading')
 ie1.set_paragraph_selector('#mw-content-text > div > p:not(p:nth-child(1))')
 ie1.set_time_selector('#mw-content-text > div > p:nth-child(1) > strong')
 ie1.set_source_selector('span.sourceTemplate')
-
-# Set a max length for post, Max is 4096
 ie1.max_post_length = 2000
 
 # News postman to manage sending affair
@@ -41,8 +39,6 @@ np1.set_extractor(ie1)
 np1.set_table_name(table_name1)
 np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
-
-# Start to work!
 np1.poll()
 
 #-------------------------channel 2----------------------------------#
