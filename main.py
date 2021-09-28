@@ -17,9 +17,9 @@ db = Session(bind=engine.connect())
 
 #-------------------------channel 1----------------------------------#
 
-url1 = "https://en.wikinews.org/wiki/Main_Page"
-tag1 = "Wiki"
-table_name1 = "wikinews"
+url1 = "http://feeds.marketwatch.com/marketwatch/bulletins"
+tag1 = "Marketwatch"
+table_name1 = "marketwatch"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
@@ -43,9 +43,9 @@ np1.poll()
 
 #-------------------------channel 2----------------------------------#
 
-url2 = "https://www.scmp.com/rss/91/feed"
-tag2 = "SCMP"
-table_name2 = "scmpnews"
+url2 = "https://www.nasdaq.com/feed/rssoutbound?category=Nasdaq"
+tag2 = "Nasdaq"
+table_name2 = "nasdaq"
 
 ie2 = InfoExtractorJSON()
 
