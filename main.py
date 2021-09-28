@@ -43,9 +43,9 @@ np1.poll()
 
 #-------------------------channel 2----------------------------------#
 
-url2 = "https://www.nasdaq.com/feed/rssoutbound?category=Nasdaq"
-tag2 = "Nasdaq"
-table_name2 = "nasdaq"
+url2 = "https://finance.yahoo.com/news/rssindex"
+tag2 = "Yahoo"
+table_name2 = "yahoo"
 
 ie2 = InfoExtractorJSON()
 
