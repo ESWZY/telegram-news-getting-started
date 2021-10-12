@@ -21,26 +21,34 @@ url1 = "http://feeds.marketwatch.com/marketwatch/bulletins"
 tag1 = "Marketwatch"
 table_name1 = "marketwatch"
 
-# Info extractor to process data format
-ie1 = InfoExtractor()
+ie1 = InfoExtractorJSON()
 
-# Select elements by CSS-based selector
-ie1.set_list_selector('#MainPage_latest_news_text > ul > li')
-ie1.set_title_selector('#firstHeading')
-ie1.set_paragraph_selector('#mw-content-text > div > p:not(p:nth-child(1))')
-ie1.set_time_selector('#mw-content-text > div > p:nth-child(1) > strong')
-ie1.set_source_selector('span.sourceTemplate')
-ie1.max_post_length = 2000
+# Pre-process the XML string, convert to JSON string
+def list_pre_process(text):
+    text = json.loads(xml_to_json(text))
+    return json.dumps(text)
+ie1.set_list_pre_process_policy(list_pre_process)
 
-# News postman to manage sending affair
-np1 = NewsPostman(listURLs=[url1, ], sendList=[channel, ], db=db, tag=tag1)
-np1.set_bot_token(bot_token)
+# Route by key list mixed with CSS selector policy
+ie1.set_list_router(['rss', 'channel', 'item'])
+ie1.set_link_router(['link'])
+ie1.set_title_router(['title'])
+ie1.set_paragraph_selector('#js-article__body p')
+ie1.set_time_router(['pubDate'])
+ie1.set_source_router(['author'])
+ie1.set_image_selector('.article__inset__image__image img')
+
+# Customize ID for news item
+def id_policy(link):
+    return hashlib.md5(link.encode("utf-8")).hexdigest()
+ie1.set_id_policy(id_policy)
+
+np1 = NewsPostmanJSON(listURLs=[url1, ], sendList=[channel, ], db=db, tag=tag1)
 np1.set_extractor(ie1)
 np1.set_table_name(table_name1)
 np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://finance.yahoo.com/news/rssindex"
