@@ -25,10 +25,10 @@ table_name1 = "sscnews"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('#MainPage_latest_news_text > ul > li') #id_ul_li
-ie1.set_title_selector('#firstHeading')  #id
-ie1.set_paragraph_selector('#mw-content-text > div > p:not(p:nth-child(1))')
-ie1.set_time_selector('#mw-content-text > div > p:nth-child(1) > strong')
+ie1.set_list_selector('#forScrollNews > ul > li') #id_ul_li
+ie1.set_title_selector('h3')  #id
+ie1.set_paragraph_selector('a')
+ie1.set_time_selector('span')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
 
