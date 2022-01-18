@@ -25,8 +25,8 @@ table_name1 = "sscnews"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('#MainPage_latest_news_text > ul > li')
-ie1.set_title_selector('#firstHeading')
+ie1.set_list_selector('#MainPage_latest_news_text > ul > li') #id_ul_li
+ie1.set_title_selector('#firstHeading')  #id
 ie1.set_paragraph_selector('#mw-content-text > div > p:not(p:nth-child(1))')
 ie1.set_time_selector('#mw-content-text > div > p:nth-child(1) > strong')
 ie1.set_source_selector('span.sourceTemplate')
@@ -43,9 +43,9 @@ np1.poll()
 
 #-------------------------channel 2----------------------------------#
 
-url2 = "https://www.scmp.com/rss/91/feed"
-tag2 = "SCMP"
-table_name2 = "scmpnews"
+url2 = "https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fssc.nic.in%2FPortal%2FLatestNews&max=5&order=document&guid=0"
+tag2 = "Sscrss"
+table_name2 = "sscrss"
 
 ie2 = InfoExtractorJSON()
 
