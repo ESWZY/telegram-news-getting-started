@@ -41,6 +41,32 @@ np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
 
+#-------------------------channel 3----------------------------------#
+
+url3 = "https://dsssb.delhi.gov.in/home/Delhi-Subordinate-Services-Selection-Board"
+tag3 = "dsssb"
+table_name3 = "dsssbnews"
+
+# Info extractor to process data format
+ie1 = InfoExtractor()
+
+# Select elements by CSS-based selector
+ie1.set_list_selector('#contSlider1 > ul > li') #id_ul_li
+ie1.set_title_selector('h3')  #id
+ie1.set_paragraph_selector('a')
+ie1.set_time_selector('span')
+ie1.set_source_selector('span.sourceTemplate')
+ie1.max_post_length = 2000
+
+# News postman to manage sending affair
+np1 = NewsPostman(listURLs=[url3, ], sendList=[channel, ], db=db, tag=tag3)
+np1.set_bot_token(bot_token)
+np1.set_extractor(ie1)
+np1.set_table_name(table_name3)
+np1.set_max_list_length(25)
+np1.set_max_table_rows(25 * 3, False)
+np1.poll()
+
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fssc.nic.in%2FPortal%2FLatestNews&max=5&order=document&guid=0"
