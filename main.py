@@ -53,7 +53,7 @@ ie1 = InfoExtractor()
 # Select elements by CSS-based selector
 ie1.set_list_selector('#contSlider1 > ul > li') #id_ul_li
 ie1.set_title_selector('#block-views-c88b26d3da3525ca29b7790682de2c7a > h2')  #id
-ie1.set_paragraph_selector('li.menu-217 > a')
+ie1.set_paragraph_selector('#contSlider1 > ul > li.menu-217 > a')
 ie1.set_time_selector('')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
