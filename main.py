@@ -50,7 +50,7 @@ table_name3 = "dsssbnews"
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
-# Select elements by CSS-based selector
+# #Select elements by CSS-based selector
 ie1.set_list_selector('#contSlider1 > ul > li') #id_ul_li
 ie1.set_title_selector('#block-views-c88b26d3da3525ca29b7790682de2c7a > h2')  #id
 ie1.set_paragraph_selector('#contSlider1 > ul > li > a')
