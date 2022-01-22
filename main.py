@@ -26,7 +26,7 @@ ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
 ie1.set_list_selector('div.inner_page > ul > li') #id_ul_li
-ie1.set_title_selector('h4')  #id
+ie1.set_title_selector('span')  #id
 ie1.set_paragraph_selector('a')
 ie1.set_time_selector('')
 ie1.set_source_selector('span.sourceTemplate')
@@ -53,8 +53,8 @@ ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
 ie1.set_list_selector('#noticeschsl.tab-content') #id_ul_li
-ie1.set_title_selector('th')  #id
-ie1.set_paragraph_selector('td')
+ie1.set_title_selector('span')  #id
+ie1.set_paragraph_selector('span')
 ie1.set_time_selector('td')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
@@ -65,6 +65,32 @@ np1.set_bot_token(bot_token)
 np1.set_extractor(ie1)
 np1.set_table_name(table_name3)
 np1.set_max_list_length(25)
+np1.set_max_table_rows(25 * 3, False)
+np1.poll()
+
+#-------------------------channel 4----------------------------------#
+
+url4 = "https://ssc.nic.in/Portal/Results"
+tag4 = "sscresult2"
+table_name4 = "result2"
+
+# Info extractor to process data format
+ie1 = InfoExtractor()
+
+# Select elements by CSS-based selector
+ie1.set_list_selector('#noticescgl.tab-content') #id_ul_li
+ie1.set_title_selector('span')  #id
+ie1.set_paragraph_selector('span')
+ie1.set_time_selector('td')
+ie1.set_source_selector('span.sourceTemplate')
+ie1.max_post_length = 2000
+
+# News postman to manage sending affair
+np1 = NewsPostman(listURLs=[url4, ], sendList=[channel, ], db=db, tag=tag4)
+np1.set_bot_token(bot_token)
+np1.set_extractor(ie1)
+np1.set_table_name(table_name4)
+np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
 #-------------------------channel 1----------------------------------#
