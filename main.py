@@ -43,17 +43,17 @@ np1.poll()
 
 #-------------------------channel 3----------------------------------#
 
-url3 = "https://sssc.uk.gov.in/pages/display/122-releases"
-tag3 = "uksssc"
-table_name3 = "ukssscnews"
+url3 = "https://sscnr.nic.in/newlook/site/admit_card.html"
+tag3 = "sscadmit"
+table_name3 = "admit"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('#midColumn') #id_ul_li
-ie1.set_title_selector('#midColumn > h2')  #id
-ie1.set_paragraph_selector('#midColumn > a')
+ie1.set_list_selector('.inner_page > ul > li') #id_ul_li
+ie1.set_title_selector('h4')  #id
+ie1.set_paragraph_selector('a')
 ie1.set_time_selector('')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
