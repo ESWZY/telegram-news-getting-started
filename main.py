@@ -6,7 +6,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
 from telegram_news.template import InfoExtractor, NewsPostman, InfoExtractorJSON, NewsPostmanJSON
-from telegram_news.utils import xml_to_jso-ot_token = os.getenv("TOKEN")
+from telegram_news.utils import xml_to_json
+
+bot_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
 DATABASE_URL = os.getenv("DATABASE_URL")
 
