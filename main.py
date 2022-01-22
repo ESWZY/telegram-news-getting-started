@@ -6,9 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
 from telegram_news.template import InfoExtractor, NewsPostman, InfoExtractorJSON, NewsPostmanJSON
-from telegram_news.utils import xml_to_json
-
-bot_token = os.getenv("TOKEN")
+from telegram_news.utils import xml_to_jso-ot_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
 DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -68,7 +66,7 @@ np1.set_max_table_rows(25 * 3, False)
 np1.poll()
 
 #-------------------------channel 2----------------------------------#
-<----
+"""
 url2 = "https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fssc.nic.in%2FPortal%2FLatestNews&max=5&order=document&guid=0"
 tag2 = "Sscrss"
 table_name2 = "sscrss"
@@ -101,4 +99,4 @@ np2.set_table_name(table_name2)
 np2.set_max_list_length(50)
 np2.set_max_table_rows(50 * 3, False)
 np2.poll()
------>
+"""
