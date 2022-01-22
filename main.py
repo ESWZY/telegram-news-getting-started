@@ -104,7 +104,7 @@ table_name5 = "uksssc"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('#midColumn') #id_ul_li
+ie1.set_list_selector('body < #midColumn') #id_ul_li
 ie1.set_title_selector('p')  #id
 ie1.set_paragraph_selector('strong')
 ie1.set_time_selector(' ')
