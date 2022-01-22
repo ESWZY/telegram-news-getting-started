@@ -130,7 +130,7 @@ table_name6 = "admit"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('.other_r_network') #id_ul_li
+ie1.set_list_selector('div > other_r_network') #id_ul_li
 ie1.set_title_selector('h4')  #id
 ie1.set_paragraph_selector('li')
 ie1.set_time_selector(' ')
