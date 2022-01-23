@@ -171,7 +171,7 @@ np1.set_table_name(table_name7)
 np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-"""
+
 #-------------------------channel 1----------------------------------#
 
 url1 = "https://ssc.nic.in/Portal/LatestNews"
@@ -197,7 +197,7 @@ np1.set_table_name(table_name1)
 np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-"""
+
 #-------------------------channel 2----------------------------------#
 """
 url2 = "https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fssc.nic.in%2FPortal%2FLatestNews&max=5&order=document&guid=0"
