@@ -20,8 +20,8 @@ def ssc_id_policy(link):
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
-tag2 = "Nr6"
-table_name2 = "Nr6"
+tag2 = "Nrssc"
+table_name2 = "Nrssc"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
@@ -125,8 +125,8 @@ np1.poll()
 #-------------------------channel 6----------------------------------#
 
 url6 = "https://sscnr.nic.in/newlook/site/admit_card.html"
-tag6 = "sscadmit"
-table_name6 = "admit"
+tag6 = "sscadmit1"
+table_name6 = "admit1"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
@@ -152,8 +152,8 @@ np1.poll()
 #-------------------------channel 7----------------------------------#
 
 url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
-tag7 = "sscstatus"
-table_name7 = "sscstatus"
+tag7 = "sscnrstatus"
+table_name7 = "sscnrstatus"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
