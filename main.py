@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from telegram_news.template import InfoExtractor, NewsPostman, InfoExtractorJSON, NewsPostmanJSON
 from telegram_news.utils import xml_to_json
-bNrnn_token = os.getenv("TOKEN")
+bot_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
 channel2 = os.getenv("CHANNEL2")
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -22,8 +22,8 @@ def ssc_id_policy(link):
 url2 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
 url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
 url6 = "https://sscnr.nic.in/newlook/site/admit_card.html"
-tag2 = "Nr"
-table_name2 = "Nr"
+tag2 = "Nrnews"
+table_name2 = "Nrnews"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
