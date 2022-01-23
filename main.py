@@ -19,16 +19,16 @@ def ssc_id_policy(link):
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
-tag2 = "Nr"
-table_name2 = "Nr4"
+tag2 = "Nr5"
+table_name2 = "Nr5"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('div.inner_page') #id_ul_li
-ie1.set_title_selector('ul')  #id
-ie1.set_paragraph_selector('li')
+ie1.set_list_selector('div.inner_page > ul > li') #id_ul_li
+ie1.set_title_selector('div.inner_page > ul > li > a')  #id
+ie1.set_paragraph_selector('li > a')
 ie1.set_time_selector('')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
