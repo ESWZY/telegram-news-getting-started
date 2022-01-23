@@ -14,24 +14,24 @@ channel2 = os.getenv("CHANNEL2")
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 db = Session(bind=engine.connect())
-"""
+
 #-------------------------channel 3----------------------------------#
 
-url3 = "https://sscnr.nic.in/newlook/site/admit_card.html"
-tag3 = "sscadmit"
-table_name3 = "admit"
+url3 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
+tag3 = "sscnr"
+table_name3 = "sscnr"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('div.inner_page > ul > li') #id_ul_li
+ie1.set_list_selector('div.inner_page > ul') #id_ul_li
 ie1.set_title_selector('span')  #id
 ie1.set_paragraph_selector('a')
 ie1.set_time_selector('')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
-
+ie1.set_id_policy(ssc_id_policy)
 # News postman to manage sending affair
 np1 = NewsPostman(listURLs=[url3, ], sendList=[channel, ], db=db, tag=tag3)
 np1.set_bot_token(bot_token)
@@ -40,7 +40,7 @@ np1.set_table_name(table_name3)
 np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-"""
+
 def ssc_id_policy(link):
         return hashlib.md5(link.encode("utf-8")).hexdigest()
 
