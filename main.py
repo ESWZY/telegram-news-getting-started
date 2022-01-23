@@ -20,8 +20,10 @@ def ssc_id_policy(link):
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
-tag2 = "Nrssc1"
-table_name2 = "Nrssc1"
+url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
+url6 = "https://sscnr.nic.in/newlook/site/admit_card.html"
+tag2 = "Nr"
+table_name2 = "Nr"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
@@ -35,7 +37,7 @@ ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
 ie1.set_id_policy(ssc_id_policy)
 # News postman to manage sending affair
-np1 = NewsPostman(listURLs=[url2, ], sendList=[channel2, ], db=db, tag=tag2)
+np1 = NewsPostman(listURLs=[url2,url7,url6, ], sendList=[channel,channel2, ], db=db, tag=tag2)
 np1.set_bot_token(bot_token)
 np1.set_extractor(ie1)
 np1.set_table_name(table_name2)
@@ -148,7 +150,7 @@ np1.set_table_name(table_name6)
 np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-
+"""
 #-------------------------channel 7----------------------------------#
 
 url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
@@ -174,7 +176,7 @@ np1.set_table_name(table_name7)
 np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-
+"""
 #-------------------------channel 1----------------------------------#
 
 url1 = "https://ssc.nic.in/Portal/LatestNews"
