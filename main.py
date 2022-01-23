@@ -20,8 +20,8 @@ def ssc_id_policy(link):
 #-------------------------channel 2----------------------------------#
 
 url2 = "https://sscnr.nic.in/newlook/site/Whatsnew.html"
-tag2 = "Nrssc"
-table_name2 = "Nrssc"
+tag2 = "Nrssc1"
+table_name2 = "Nrssc1"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
