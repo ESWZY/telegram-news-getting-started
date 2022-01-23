@@ -132,9 +132,9 @@ table_name6 = "admit"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('div.other_r_network > ul') #id_ul_li
-ie1.set_title_selector('h4')  #id
-ie1.set_paragraph_selector('li')
+ie1.set_list_selector(' div.inner_page > ul ') #id_ul_li
+ie1.set_title_selector(' div.inner_page > ul > li ')  #id
+ie1.set_paragraph_selector(' div.inner_page > ul > li  ')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
@@ -159,9 +159,9 @@ table_name7 = "sscstatus"
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector('div.other_r_network > ul') #id_ul_li
-ie1.set_title_selector('h4')  #id
-ie1.set_paragraph_selector('li')
+ie1.set_list_selector(' div.inner_page > ul ') #id_ul_li
+ie1.set_title_selector(' div.inner_page > ul > li  ')  #id
+ie1.set_paragraph_selector(' div.inner_page > ul > li ')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
