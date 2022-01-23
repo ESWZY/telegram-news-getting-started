@@ -123,7 +123,7 @@ np1.set_table_name(table_name5)
 np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-
+"""
 #-------------------------channel 6----------------------------------#
 
 url6 = "https://sscnr.nic.in/newlook/site/admit_card.html"
@@ -150,7 +150,7 @@ np1.set_table_name(table_name6)
 np1.set_max_list_length(45)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
-"""
+
 #-------------------------channel 7----------------------------------#
 
 url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
