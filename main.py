@@ -125,16 +125,16 @@ np1.poll()
 #-------------------------channel 6----------------------------------#
 
 url6 = "https://sscnr.nic.in/newlook/site/admit_card.html"
-tag6 = "sscadmit1"
-table_name6 = "admit1"
+tag6 = "sscadmit2"
+table_name6 = "admit2"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector(' div.inner_page > ul ') #id_ul_li
-ie1.set_title_selector(' div.inner_page > ul > li ')  #id
-ie1.set_paragraph_selector(' div.inner_page > ul > li  ')
+ie1.set_list_selector('div.inner_page > ul ') #id_ul_li
+ie1.set_title_selector('div.inner_page > ul > li ')  #id
+ie1.set_paragraph_selector('div.inner_page > ul > li  ')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
@@ -152,16 +152,16 @@ np1.poll()
 #-------------------------channel 7----------------------------------#
 
 url7 = "https://sscnr.nic.in/newlook/site/application_status.html"
-tag7 = "sscnrstatus"
-table_name7 = "sscnrstatus"
+tag7 = "sscnrstatus2"
+table_name7 = "sscnrstatus2"
 
 # Info extractor to process data format
 ie1 = InfoExtractor()
 
 # Select elements by CSS-based selector
-ie1.set_list_selector(' div.inner_page > ul ') #id_ul_li
-ie1.set_title_selector(' div.inner_page > ul > li  ')  #id
-ie1.set_paragraph_selector(' div.inner_page > ul > li ')
+ie1.set_list_selector('div.inner_page > ul ') #id_ul_li
+ie1.set_title_selector('div.inner_page > ul > li  ')  #id
+ie1.set_paragraph_selector('div.inner_page > ul > li ')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
