@@ -12,7 +12,6 @@ bot_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
 channel2 = os.getenv("CHANNEL2")
 DATABASE_URL = os.getenv("DATABASE_URL")
-
 engine = create_engine(DATABASE_URL)
 db = Session(bind=engine.connect())
 """
@@ -42,6 +41,8 @@ np1.set_max_list_length(25)
 np1.set_max_table_rows(25 * 3, False)
 np1.poll()
 """
+def ssc_id_policy(link):
+        return hashlib.md5(link.encode("utf-8")).hexdigest()
 
 #-------------------------channel 3----------------------------------#
 
@@ -111,6 +112,7 @@ ie1.set_paragraph_selector('strong')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
+ie1.set_id_policy(ssc_id_policy)
 
 # News postman to manage sending affair
 np1 = NewsPostman(listURLs=[url5, ], sendList=[channel2, ], db=db, tag=tag5)
@@ -137,6 +139,7 @@ ie1.set_paragraph_selector('li')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
+ie1.set_id_policy(ssc_id_policy)
 
 # News postman to manage sending affair
 np1 = NewsPostman(listURLs=[url6, ], sendList=[channel, ], db=db, tag=tag6)
@@ -163,7 +166,7 @@ ie1.set_paragraph_selector('li')
 ie1.set_time_selector(' ')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
-
+ie1.set_id_policy(ssc_id_policy)
 # News postman to manage sending affair
 np1 = NewsPostman(listURLs=[url7, ], sendList=[channel, ], db=db, tag=tag7)
 np1.set_bot_token(bot_token)
