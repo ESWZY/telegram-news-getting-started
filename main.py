@@ -10,6 +10,7 @@ from telegram_news.utils import xml_to_json
 
 bot_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
+channel2 = os.getenv("CHANNEL2")
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(DATABASE_URL)
@@ -112,7 +113,7 @@ ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
 
 # News postman to manage sending affair
-np1 = NewsPostman(listURLs=[url5, ], sendList=[channel, ], db=db, tag=tag5)
+np1 = NewsPostman(listURLs=[url5, ], sendList=[channel2, ], db=db, tag=tag5)
 np1.set_bot_token(bot_token)
 np1.set_extractor(ie1)
 np1.set_table_name(table_name5)
