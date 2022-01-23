@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from telegram_news.template import InfoExtractor, NewsPostman, InfoExtractorJSON, NewsPostmanJSON
 from telegram_news.utils import xml_to_json
-bNrn_token = os.getenv("TOKEN")
+bNrnn_token = os.getenv("TOKEN")
 channel = os.getenv("CHANNEL")
 channel2 = os.getenv("CHANNEL2")
 DATABASE_URL = os.getenv("DATABASE_URL")
