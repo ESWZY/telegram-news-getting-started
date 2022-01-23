@@ -14,6 +14,10 @@
 			"description": "Channel ID to push messages.",
 			"value": "@yourchannel"
 		}
+                "CHANNEL2": {
+			"description": "Channel2 ID to push messages.",
+			"value": "@yourchannel2"
+		}
 	},
 	"buildpacks": [
 		{
