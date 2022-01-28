@@ -8,7 +8,7 @@ Make sure you have [Python3](https://www.python.org/) and the [Heroku CLI](https
 
 ```sh
 $ git clone https://github.com/ESWZY/telegram-news-getting-started # or clone your own fork
-$ cd telegram-news-deploy
+$ cd telegram-news-getting-started
 $ pip install -r requirements.txt
 $ python main.py
 ```
